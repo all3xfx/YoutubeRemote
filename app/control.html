@@ -20,24 +20,15 @@
 	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
 </head>
-<body ng-controller="MainController as MainCtrl">
+<body ng-controller="RemoteControlController as RemoteCtrl">
 	
 	<div class="container">
-		<div class="embed-responsive embed-responsive-16by9">
-			<youtube-video
-				player="videoPlayer"
-				video-url="video.url"
-				player-width="'100%'"
-				class="embed-responsive-item">
-			</youtube-video>
-		</div>
-		<br>
 		<div class="form-group">
 			<input id="video-url" type="text" class="form-control input-lg" ng-model="video.url">
 		</div>
 		<div class="row">
 			<div class="col-xs-4">
-				<button ng-click="videoPlayer.playVideo()" class="btn btn-block btn-success"><span class="glyphicon glyphicon-play"></span> Play</button>
+				<button ng-click="play()" class="btn btn-block btn-success"><span class="glyphicon glyphicon-play"></span> Play</button>
 			</div>
 			<div class="col-xs-4">
 				<button ng-click="videoPlayer.stopVideo()" class="btn btn-block btn-danger"><span class="glyphicon glyphicon-stop"></span> Stop</button>
@@ -59,7 +50,7 @@
 <!-- app -->
 <script src="assets/js/app.js"></script>
 <!-- controllers -->
-<script src="assets/js/controllers/mainctrl.js"></script>
+<script src="assets/js/controllers/remotecontrolctrl.js"></script>
 <!-- services -->
 <script src="assets/js/services/socket.js"></script>
 </html>

@@ -1,0 +1,29 @@
+{
+  "name": "YoutubeRemote",
+  "version": "0.0.1",
+  "authors": [
+    "Jefferson Neves <jefferson.rpn@gmail.com>"
+  ],
+  "description": "Control youtube player with your mobile browser",
+  "main": "app/index.html",
+  "keywords": [
+    "youtube",
+    "remote",
+    "control",
+    "xss"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/assets/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.6",
+    "angular-youtube-mb": "~1.1.0",
+    "bootstrap": "~3.3.5"
+  }
+}

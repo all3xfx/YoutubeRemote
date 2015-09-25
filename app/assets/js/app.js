@@ -1,0 +1,1 @@
+angular.module('YoutubeRemote', ['youtube-embed']);

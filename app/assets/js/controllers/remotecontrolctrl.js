@@ -1,9 +1,9 @@
-angular.module('YoutubeRemote').controller('RemoteControlController', function($scope, socket) {
-	var video = {
-		url: 'https://www.youtube.com/watch?v=tFIXXfSs_w0'
-	};
-	$scope.video = video;
+angular.module('YoutubeRemote').controller('RemoteControlController', function($scope, youtubevideo, socket) {
+	$scope.video = youtubevideo;
 	$scope.play = function() {
 		socket.emit('play');
+	};
+	$scope.stop = function() {
+		socket.emit('stop');
 	};
 });

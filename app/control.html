@@ -31,10 +31,10 @@
 				<button ng-click="play()" class="btn btn-block btn-success"><span class="glyphicon glyphicon-play"></span> Play</button>
 			</div>
 			<div class="col-xs-4">
-				<button ng-click="videoPlayer.stopVideo()" class="btn btn-block btn-danger"><span class="glyphicon glyphicon-stop"></span> Stop</button>
+				<button ng-click="stop()" class="btn btn-block btn-danger"><span class="glyphicon glyphicon-stop"></span> Stop</button>
 			</div>
 			<div class="col-xs-4">
-				<button ng-click="connect()" class="btn btn-block btn-warning"><span class="glyphicon glyphicon-sort"></span> Connect</button>
+				<button ng-click="connect()" class="btn btn-block btn-warning"><span class="glyphicon glyphicon-sort"></span> Reload</button>
 			</div>
 		</div>
 	</div>
@@ -53,4 +53,5 @@
 <script src="assets/js/controllers/remotecontrolctrl.js"></script>
 <!-- services -->
 <script src="assets/js/services/socket.js"></script>
+<script src="assets/js/services/youtubevideo.js"></script>
 </html>

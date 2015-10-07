@@ -5,6 +5,7 @@ var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 var app = express();
 var server = require('http').createServer(app);
 var io = require('socket.io')(server);
+io.set('log level', 2);
 
 var config = require('./server/config/config')[env];
 require('./server/config/express')(app, config);
@@ -18,7 +19,11 @@ io.on('connection', function(client) {
 	});
 	client.on('play', function() {
 		console.log('Play');
-		client.emit('play', 'Hit the play btn!');
+		client.broadcast.emit('play');
+	});
+	client.on('stop', function() {
+		console.log('Stop');
+		client.broadcast.emit('stop');
 	});
 });
 

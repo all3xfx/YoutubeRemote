@@ -1,12 +1,13 @@
-angular.module('YoutubeRemote').controller('MainController', function($scope, socket) {
-	socket.on('play', function(data) {
-		console.log(data);
-	});
-	var video = {
-		url: 'https://www.youtube.com/watch?v=tFIXXfSs_w0'
-	};
-	$scope.video = video;
+angular.module('YoutubeRemote').controller('MainController', function($scope, youtubevideo, socket) {
+	$scope.video = youtubevideo;
 	$scope.connect = function() {
-		socket.emit('join', video);
+		socket.emit('join', $scope.video);
 	};
+
+	socket.on('play', function() {
+		$scope.video.player.playVideo();
+	});
+	socket.on('stop', function() {
+		$scope.video.player.stopVideo();
+	});
 });

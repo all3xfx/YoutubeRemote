@@ -4,7 +4,8 @@
   "description": "Control youtube player with your mobile browser",
   "main": "server.js",
   "scripts": {
-    "test": ""
+    "start": "node server.js",
+    "postinstall": "bower install"
   },
   "repository": {
     "type": "git",

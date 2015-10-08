@@ -5,7 +5,12 @@ var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 var app = express();
 var server = require('http').createServer(app);
 var io = require('socket.io')(server);
+// Heroku won't actually allow us to use WebSockets
+// so we have to setup polling instead.
+// https://devcenter.heroku.com/articles/using-socket-io-with-node-js-on-heroku
 io.set('log level', 2);
+io.set("transports", ["xhr-polling"]); 
+io.set("polling duration", 10); 
 
 var config = require('./server/config/config')[env];
 require('./server/config/express')(app, config);

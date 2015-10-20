@@ -1,5 +1,5 @@
 angular.module('YoutubeRemote').factory('socket', function($rootScope) {
-	var host = location.origin.replace(/^http/, 'ws');
+	var host = location.origin.replace(/^https/, 'http');
 	var server = io.connect(host);
 	return {
 		on: function (eventName, callback) {

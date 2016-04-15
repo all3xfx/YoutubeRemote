@@ -9,9 +9,6 @@ Install the dependencies:
 ```shell
 $ npm install
 ```
-```shell
-$ bower install
-```
 Run the node server (with node, nodemon, forever, anyone you like):
 ```shell
 $ node server
